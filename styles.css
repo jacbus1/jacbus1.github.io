@@ -7,3 +7,7 @@ p{font-size:1rem}.project-points,.market-details ul{font-size:1rem}.header nav,.
 .profile-credentials{margin:25px 0;padding:20px 0;border-block:1px solid var(--line)}.profile-credentials h3{font-size:1rem;font-weight:500;margin:0 0 12px}.profile-credentials p{font-size:.875rem;color:#a9b4c5;line-height:1.8;margin:10px 0}
 
 .market-version{margin:2rem 0 3rem}.market-version>h4{font-size:1.35rem;margin:0 0 1rem}.market-version .terminal{min-height:0}
+
+.overview-link {display:block;padding:12px 17px;text-decoration:underline}
+.overview-page {max-width:1600px;margin:auto;padding:clamp(18px,4vw,60px)}
+.overview-page img {display:block;width:100%;height:auto;margin-top:24px}
