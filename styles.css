@@ -11,3 +11,13 @@ p{font-size:1rem}.project-points,.market-details ul{font-size:1rem}.header nav,.
 .overview-link {display:block;padding:12px 17px;text-decoration:underline}
 .overview-page {max-width:1600px;margin:auto;padding:clamp(18px,4vw,60px)}
 .overview-page img {display:block;width:100%;height:auto;margin-top:24px}
+
+#experience .section-heading h2 {font-size:clamp(2.65rem,5.6vw,5.8rem);line-height:1.06;max-width:20ch}
+.experience-list article {grid-template-columns:minmax(9rem,.6fr) minmax(0,2fr) minmax(11rem,.7fr);padding:2.6rem 0}
+.experience-list h3 {font-size:clamp(1.4rem,2vw,2rem)}
+.experience-list .company,.experience-date {font-size:.95rem}
+.role-points {padding-left:1.2rem;margin:0;color:#c6ccd5;font-size:1rem;line-height:1.65}
+.role-points li+li {margin-top:.55rem}
+.role-focus {align-self:start;list-style:none;margin:0;padding:0 0 0 1rem;border-left:1px solid var(--line);color:#c6ccd5;font-size:1rem;line-height:1.45}
+.role-focus li+li {margin-top:.4rem}
+@media(max-width:800px){.experience-list article{grid-template-columns:1fr;gap:.8rem}.role-focus{margin-top:.5rem}}
