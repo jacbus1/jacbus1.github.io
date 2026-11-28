@@ -7,6 +7,7 @@
   <title>Portfolio Risk Management | Jacky Huang</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="case.css">
 </head>
 <body>
   <main class="section">
@@ -15,6 +16,39 @@
       <p class="section-note">Independent research on portfolio construction and downside risk across U.S. equities, Treasuries, and gold.</p>
       <p class="section-note">The study compares fixed allocation with a risk-controlled approach using chronological holdout periods and historical stress scenarios.</p>
     </div>
+    <section class="risk-case" aria-labelledby="dashboard-heading">
+      <div class="risk-case-header">
+        <div><p class="eyebrow">ILLUSTRATIVE DATA</p><h2 id="dashboard-heading">Portfolio monitoring dashboard</h2></div>
+        <span>USD · Sample month-end</span>
+      </div>
+      <div class="case-metrics">
+        <div><span>Portfolio value</span><strong>$97,800</strong></div>
+        <div><span>Peak value</span><strong>$100,000</strong></div>
+        <div><span>Peak-to-current drawdown</span><strong>2.20%</strong></div>
+        <div><span>Drawdown review level</span><strong>3.00%</strong></div>
+      </div>
+      <div class="case-panels">
+        <section aria-labelledby="allocation-heading">
+          <h3 id="allocation-heading">Allocation</h3>
+          <div class="allocation" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <dl>
+            <div><dt>U.S. equities</dt><dd>50%</dd></div>
+            <div><dt>Treasuries</dt><dd>25%</dd></div>
+            <div><dt>Gold</dt><dd>15%</dd></div>
+            <div><dt>Cash</dt><dd>10%</dd></div>
+          </dl>
+        </section>
+        <section aria-labelledby="review-heading">
+          <h3 id="review-heading">Review workflow</h3>
+          <ol>
+            <li>Reconcile holdings, cash, and valuation timestamps.</li>
+            <li>Review concentration and compare with the allocation mandate.</li>
+            <li>Compare observed drawdown with the review level and review stress scenarios separately.</li>
+          </ol>
+        </section>
+      </div>
+      <p class="case-caption">Illustrative figures for a fictitious portfolio.</p>
+    </section>
     <a class="button primary" href="../#work">Back to selected work</a>
   </main>
 </body>
