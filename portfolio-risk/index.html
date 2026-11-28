@@ -3,114 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0d11">
-  <meta name="description" content="Jacky Huang's portfolio risk engineering case study. Walk-forward historical risk backtest, independent AI review, and synthetic Bloomberg integration.">
+  <meta name="theme-color" content="#090a0c">
   <title>Portfolio Risk Management | Jacky Huang</title>
-  <link rel="icon" href="../assets/favicon.svg">
-  <link rel="stylesheet" href="risk.css">
-  <script src="risk.js" defer></script>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="top">
-    <a class="identity" href="../" aria-label="Jacky Huang’s portfolio">JH<span>.</span></a>
-    <nav aria-label="Case study"><a href="#backtest">Backtest</a><a href="#bloomberg">Integration</a><a href="#review">Model review</a></nav>
-    <a class="back" href="../#work">Portfolio ↗</a>
-  </header>
-  <main id="main">
-    <section class="intro" aria-labelledby="title">
-      <div>
-        <p class="eyebrow">INDEPENDENT RESEARCH · NOVEMBER 2026</p>
-        <h1 id="title">Portfolio Risk<br><em>Management</em></h1>
-        <p class="lede">How much downside did a portfolio loss limit remove, and what did lower exposure cost? A historical replay compares fixed allocation with risk controls on a hypothetical US equity, Treasury and gold portfolio.</p>
-        <a class="button primary" href="#backtest">View the backtest ↓</a>
-        <a class="button" href="README.md">Methods & source</a>
-      </div>
-      <aside class="overview" aria-label="Study setup">
-        <h2>Study setup</h2>
-        <dl>
-          <div><dt>Investable assets</dt><dd>SPY · IEF · GLD</dd></div>
-          <div><dt>Fixed benchmark</dt><dd>60% · 30% · 10%</dd></div>
-          <div><dt>Risk control</dt><dd>Expected Shortfall overlay</dd></div>
-          <div><dt>Review</dt><dd>Claude + local open-weight models</dd></div>
-          <div><dt>Bloomberg integration</dt><dd>Synthetic transport</dd></div>
-        </dl>
-      </aside>
-    </section>
-
-    <section id="backtest" aria-labelledby="backtest-heading">
-      <p class="eyebrow">HISTORICAL REPLAY</p>
-      <h2 id="backtest-heading">The risk and return trade-off</h2>
-      <p class="section-copy" id="backtest-summary" role="status">Loading the verified backtest…</p>
-      <div id="metrics" class="metrics" hidden></div>
-      <div id="backtest-details" hidden>
-        <div class="table-wrap" tabindex="0" aria-label="Out-of-sample strategy metrics">
-          <table><caption>Chronological holdout · net of assumed costs</caption><thead id="model-head"></thead><tbody id="model-body"></tbody></table>
-        </div>
-        <figure class="panel chart-panel">
-          <figcaption>
-            <h3>Holdout path</h3>
-            <label for="chart-view">Chart measure</label>
-            <select id="chart-view"><option value="nav">Growth of $1</option><option value="drawdown">Drawdown</option></select>
-          </figcaption>
-          <canvas id="history-chart" role="img" aria-label="Monthly growth of one dollar for the three strategies. Summary values are displayed in the table above."></canvas>
-          <div id="chart-legend" class="legend"></div>
-        </figure>
-        <div class="split">
-          <article class="panel">
-            <h3>Historical stress windows</h3>
-            <label for="stress-case">Window</label>
-            <select id="stress-case"></select>
-            <div id="stress-output" aria-live="polite"></div>
-          </article>
-          <article class="panel">
-            <h3>Portfolio loss estimates</h3>
-            <div id="risk-output"></div>
-          </article>
-        </div>
-        <article class="panel sensitivity">
-          <h3>Cash yield sensitivity</h3>
-          <p class="note">The main replay assumes 0% cash yield. Select a hypothetical constant rate to compare annualized return and maximum drawdown.</p>
-          <label for="cash-yield">Annual cash yield</label>
-          <select id="cash-yield"></select>
-          <div id="cash-output" aria-live="polite"></div>
-        </article>
-      </div>
-      <details class="methods">
-        <summary>Backtest assumptions</summary>
-        <ul id="assumptions">
-          <li>Weights use completed observations. Trades in the simulator occur at a subsequent open.</li>
-          <li>The sample represents three retrospectively selected ETFs in a hypothetical USD portfolio.</li>
-        </ul>
-      </details>
-      <a class="subtle-link" href="results/backtest.json">Download aggregate replay results ↗</a>
-    </section>
-
-    <section id="bloomberg" aria-labelledby="bloomberg-heading">
-      <p class="eyebrow">MARKET DATA ENGINEERING</p>
-      <h2 id="bloomberg-heading">Bloomberg integration sandbox</h2>
-      <p class="section-copy">Explore responses generated by a local mock adapter, including validation failures. All identifiers and values in this sandbox are synthetic. A live connection would require Bloomberg entitlements and a suitable Desktop or Server API deployment.</p>
-      <div class="panel sandbox">
-        <div class="sandbox-toolbar"><label for="request-case">Mock scenario</label><select id="request-case"><option>Loading tested cases…</option></select></div>
-        <p id="request-result" class="request-state" role="status"></p>
-        <div class="split">
-          <div><h3>Request</h3><pre id="request-in" tabindex="0"></pre></div>
-          <div><h3>Response summary</h3><pre id="request-out" tabindex="0"></pre></div>
-        </div>
-      </div>
-      <a class="subtle-link" href="https://professional.bloomberg.com/support/api-library/">Bloomberg API documentation ↗</a>
-    </section>
-
-    <section id="review" aria-labelledby="review-heading">
-      <p class="eyebrow">MULTI-MODEL REVIEW</p>
-      <h2 id="review-heading">Independent checks on the same evidence</h2>
-      <p class="section-copy">Claude and local open-weight models review the methodology in parallel. Deterministic code calculates the metrics. A reviewer checks claims against the run and tests before publication.</p>
-      <div class="reviews" id="review-output" aria-live="polite"></div>
-      <p class="note">Checklist scores measure how accurately the models read eight statements about this replay. They measure document interpretation on this example.</p>
-      <a class="subtle-link" href="results/model-checklist.json">View the questions and checked answers ↗</a>
-      <a class="subtle-link" href="README.md#reproduce">Run the backtest and model reviews ↗</a>
-    </section>
+  <main class="section">
+    <div class="section-heading">
+      <h1>Portfolio Risk Management</h1>
+      <p class="section-note">Independent research on multi-asset portfolio risk, historical replay, and market data integration.</p>
+      <p class="section-note">The interactive demonstration is available privately.</p>
+    </div>
+    <a class="button primary" href="../#work">Back to selected work</a>
   </main>
-  <footer><span>Jacky Huang · Independent portfolio project</span><a href="https://github.com/jacbus1/jacbus1.github.io/tree/main/portfolio-risk">GitHub source ↗</a></footer>
 </body>
 </html>
