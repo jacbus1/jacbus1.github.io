@@ -1,0 +1,73 @@
+{
+  "evidence_and_question_sha256": "3a64ffd289726f75edfa7f7e1c8c86e09961da06b18f7d72033c0f3c555cf4a9",
+  "questions": {
+    "drawdown": "Was the overlay maximum drawdown closer to zero than fixed allocation?",
+    "volatility": "Was overlay volatility lower than fixed allocation?",
+    "return": "Was overlay annualized return higher than fixed allocation?",
+    "budget": "Was realized holdout daily expected shortfall at or below the stated risk budget?",
+    "rebound": "Did the overlay return exceed the static cash diagnostic in the pandemic rebound?",
+    "cash": "Was the average holdout cash weight higher for the overlay than static cash?",
+    "selloff": "Did the overlay lose less than the static cash diagnostic during the pandemic selloff?",
+    "rate_shock": "Did the overlay lose less than the static cash diagnostic in the 2022 rate shock?"
+  },
+  "expected": {
+    "drawdown": "yes",
+    "volatility": "yes",
+    "return": "no",
+    "budget": "no",
+    "rebound": "no",
+    "cash": "yes",
+    "selloff": "no",
+    "rate_shock": "yes"
+  },
+  "model_runs": [
+    {
+      "model": "claude-haiku-5-5",
+      "status": "complete",
+      "answers": {
+        "drawdown": "yes",
+        "volatility": "yes",
+        "return": "no",
+        "budget": "no",
+        "rebound": "no",
+        "cash": "yes",
+        "selloff": "no",
+        "rate_shock": "yes"
+      },
+      "correct": 8,
+      "total": 8
+    },
+    {
+      "model": "qwen3:4b",
+      "status": "complete",
+      "answers": {
+        "drawdown": "no",
+        "volatility": "no",
+        "return": "no",
+        "budget": "no",
+        "rebound": "yes",
+        "cash": "no",
+        "selloff": "no",
+        "rate_shock": "no"
+      },
+      "correct": 3,
+      "total": 8
+    },
+    {
+      "model": "granite3.3:2b",
+      "status": "complete",
+      "answers": {
+        "drawdown": "yes",
+        "volatility": "yes",
+        "return": "no",
+        "budget": "no",
+        "rebound": "yes",
+        "cash": "yes",
+        "selloff": "yes",
+        "rate_shock": "yes"
+      },
+      "correct": 6,
+      "total": 8
+    }
+  ]
+}

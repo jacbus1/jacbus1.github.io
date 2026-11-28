@@ -1,0 +1,2722 @@
+{
+  "schema_version": 1,
+  "provenance": {
+    "normalized_csv_sha256": "fe4b622da1c4315ec8885150593c11a0e59820812746643fdf8a44ca1241aae6",
+    "exchange_calendar": "XNYS",
+    "expected_sessions": 5207,
+    "session_first": "2006-01-03",
+    "session_last": "2026-09-15",
+    "observations_per_asset": {
+      "SPY": 5207,
+      "IEF": 5207,
+      "GLD": 5207
+    },
+    "basis": "Provider adjusted close and open multiplied by adjusted close / close",
+    "provider": "Yahoo Finance",
+    "retrieved_at_utc": "2026-11-28T07:16:35+00:00",
+    "client": "yfinance 1.2.0",
+    "history_urls": {
+      "SPY": "https://finance.yahoo.com/quote/SPY/history/",
+      "IEF": "https://finance.yahoo.com/quote/IEF/history/",
+      "GLD": "https://finance.yahoo.com/quote/GLD/history/"
+    },
+    "local_spy_archive_overlap": {
+      "source": "Local Yahoo Finance archive",
+      "symbol": "SPY",
+      "archived_at_utc": "2026-09-16T04:29:04.515344+00:00",
+      "parquet_sha256": "46ec464a8da552ca4a8c341773b5d511a4fa2b448d1cdeec6d611345335e2d54",
+      "sessions_compared": 5207,
+      "first_session": "2006-01-03",
+      "last_session": "2026-09-15",
+      "maximum_absolute_relative_difference": {
+        "open": 2.220446049250313e-16,
+        "close": 2.220446049250313e-16
+      }
+    }
+  },
+  "methodology": {
+    "strategic_weights": {
+      "SPY": 0.6,
+      "IEF": 0.3,
+      "GLD": 0.1
+    },
+    "observations_per_year": 252,
+    "cash_annual_yield": 0.0,
+    "initial_nav_each_period": 1.0,
+    "transaction_fee_bps_per_absolute_traded_dollar": 5,
+    "execution_rule": "First exchange session of month at open, signal from prior completed close",
+    "risk_lookback_sessions": 126,
+    "risk_confidence": 0.95,
+    "risk_daily_es_limit": 0.01,
+    "matched_static_invested_fraction_from_development": 0.7939693797338047,
+    "assumed_shocks": {
+      "equity_selloff": {
+        "SPY": -0.25,
+        "IEF": 0.06,
+        "GLD": 0.05
+      },
+      "inflation_and_rates": {
+        "SPY": -0.15,
+        "IEF": -0.12,
+        "GLD": -0.05
+      },
+      "gold_selloff": {
+        "SPY": -0.04,
+        "IEF": 0.02,
+        "GLD": -0.25
+      }
+    }
+  },
+  "development": {
+    "first_session": "2007-01-03",
+    "last_session": "2016-12-30",
+    "strategies": {
+      "fixed_weights": {
+        "sessions": 2518,
+        "total_return": 0.9374001081803893,
+        "cagr": 0.06842673135234123,
+        "annualized_volatility": 0.1169807598518095,
+        "sharpe_zero_rate": 0.6243023432001444,
+        "max_drawdown": -0.3229595967548561,
+        "daily_var_95": 0.01081265090149397,
+        "daily_expected_shortfall_95": 0.017705462534866743,
+        "worst_daily_return": -0.05458689662626348,
+        "average_cash_weight": 7.551689050712239e-17,
+        "average_close_weights": {
+          "SPY": 0.6001557934378677,
+          "IEF": 0.29976739451457496,
+          "GLD": 0.10007681204755733
+        },
+        "annualized_gross_turnover": 0.3696160791332288,
+        "total_fees_as_fraction_of_starting_nav": 0.00220734725713013,
+        "rebalances": 120
+      },
+      "es_overlay": {
+        "sessions": 2518,
+        "total_return": 0.6665624736807141,
+        "cagr": 0.05244589550176926,
+        "annualized_volatility": 0.07611775045278812,
+        "sharpe_zero_rate": 0.7096986395725415,
+        "max_drawdown": -0.16924460242906814,
+        "daily_var_95": 0.007508794334863067,
+        "daily_expected_shortfall_95": 0.011353665636582988,
+        "worst_daily_return": -0.03102772236799567,
+        "average_cash_weight": 0.20603062026619537,
+        "average_close_weights": {
+          "SPY": 0.4765461167586945,
+          "IEF": 0.23798642364646008,
+          "GLD": 0.07943683932865003
+        },
+        "annualized_gross_turnover": 0.6712654832752311,
+        "total_fees_as_fraction_of_starting_nav": 0.003920201519324161,
+        "rebalances": 120
+      },
+      "matched_static_cash": {
+        "sessions": 2518,
+        "total_return": 0.7034327201331381,
+        "cagr": 0.054753249932439685,
+        "annualized_volatility": 0.09238480270624973,
+        "sharpe_zero_rate": 0.6232286461933041,
+        "max_drawdown": -0.2642116314977837,
+        "daily_var_95": 0.008585718924854935,
+        "daily_expected_shortfall_95": 0.014017913542100071,
+        "worst_daily_return": -0.0434298544988464,
+        "average_cash_weight": 0.2057230006307242,
+        "average_close_weights": {
+          "SPY": 0.47672220311224256,
+          "IEF": 0.23807043334838093,
+          "GLD": 0.07948436290865238
+        },
+        "annualized_gross_turnover": 0.3022572107515932,
+        "total_fees_as_fraction_of_starting_nav": 0.001739229748185489,
+        "rebalances": 120
+      }
+    }
+  },
+  "holdout": {
+    "first_session": "2017-01-03",
+    "last_session": "2026-09-15",
+    "strategies": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.7556548035122685,
+        "cagr": 0.11046056157140871,
+        "annualized_volatility": 0.11100834748141913,
+        "sharpe_zero_rate": 0.999589398584091,
+        "max_drawdown": -0.20487813856518056,
+        "daily_var_95": 0.010655777966711799,
+        "daily_expected_shortfall_95": 0.016644049969548616,
+        "worst_daily_return": -0.05937154957048307,
+        "average_cash_weight": 7.75232799913389e-17,
+        "average_close_weights": {
+          "SPY": 0.6011043407498791,
+          "IEF": 0.29856822058385346,
+          "GLD": 0.10032743866626732
+        },
+        "annualized_gross_turnover": 0.33317505584891144,
+        "total_fees_as_fraction_of_starting_nav": 0.00233394242836453,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 0.9324649103067801,
+        "cagr": 0.07046746720939101,
+        "annualized_volatility": 0.08043028992536147,
+        "sharpe_zero_rate": 0.8870135705865895,
+        "max_drawdown": -0.16200383992422274,
+        "daily_var_95": 0.007650410188500989,
+        "daily_expected_shortfall_95": 0.012390262224178194,
+        "worst_daily_return": -0.04409407277110433,
+        "average_cash_weight": 0.22905386146342183,
+        "average_close_weights": {
+          "SPY": 0.463073237220676,
+          "IEF": 0.230442150235063,
+          "GLD": 0.07743075108083923
+        },
+        "annualized_gross_turnover": 0.82629759710605,
+        "total_fees_as_fraction_of_starting_nav": 0.005382605052187407,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.2567938331528197,
+        "cagr": 0.08777263151524939,
+        "annualized_volatility": 0.0878448303840539,
+        "sharpe_zero_rate": 1.001842064310507,
+        "max_drawdown": -0.16512838008961073,
+        "daily_var_95": 0.008462652529756531,
+        "daily_expected_shortfall_95": 0.013185960509358845,
+        "worst_daily_return": -0.04669571517602933,
+        "average_cash_weight": 0.2053546717069827,
+        "average_close_weights": {
+          "SPY": 0.4776912183670356,
+          "IEF": 0.23723402676972977,
+          "GLD": 0.07972008315625201
+        },
+        "annualized_gross_turnover": 0.2760652213760575,
+        "total_fees_as_fraction_of_starting_nav": 0.0017908936539256077,
+        "rebalances": 117
+      }
+    }
+  },
+  "holdout_fee_sensitivity_bps": {
+    "0": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.760099955029279,
+        "cagr": 0.11064558122618551,
+        "annualized_volatility": 0.1110097415021533,
+        "sharpe_zero_rate": 1.0010796032510711,
+        "max_drawdown": -0.20478338137172436,
+        "daily_var_95": 0.010655777966711688,
+        "daily_expected_shortfall_95": 0.016643324916737055,
+        "worst_daily_return": -0.05937154957048274,
+        "average_cash_weight": 2.11074219002462e-16,
+        "average_close_weights": {
+          "SPY": 0.6011043407498791,
+          "IEF": 0.2985682205838534,
+          "GLD": 0.10032743866626731
+        },
+        "annualized_gross_turnover": 0.33321966871836756,
+        "total_fees_as_fraction_of_starting_nav": 0.0,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 0.9402050655963377,
+        "cagr": 0.07090985160079244,
+        "annualized_volatility": 0.08042881590853619,
+        "sharpe_zero_rate": 0.8921668001484182,
+        "max_drawdown": -0.16191427115280266,
+        "daily_var_95": 0.007650410188500989,
+        "daily_expected_shortfall_95": 0.012387561474239552,
+        "worst_daily_return": -0.04409407277110422,
+        "average_cash_weight": 0.2290538614634219,
+        "average_close_weights": {
+          "SPY": 0.46307323722067595,
+          "IEF": 0.23044215023506295,
+          "GLD": 0.07743075108083923
+        },
+        "annualized_gross_turnover": 0.8263614286780746,
+        "total_fees_as_fraction_of_starting_nav": 0.0,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.259809784970892,
+        "cagr": 0.08792279952472182,
+        "annualized_volatility": 0.0878459910980861,
+        "sharpe_zero_rate": 1.0034018868237566,
+        "max_drawdown": -0.165042913115915,
+        "daily_var_95": 0.008462652529756531,
+        "daily_expected_shortfall_95": 0.013185352837959461,
+        "worst_daily_return": -0.04669571517602944,
+        "average_cash_weight": 0.20535467170698282,
+        "average_close_weights": {
+          "SPY": 0.47769121836703543,
+          "IEF": 0.2372340267697297,
+          "GLD": 0.07972008315625201
+        },
+        "annualized_gross_turnover": 0.27609184734749803,
+        "total_fees_as_fraction_of_starting_nav": 0.0,
+        "rebalances": 117
+      }
+    },
+    "5": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.7556548035122685,
+        "cagr": 0.11046056157140871,
+        "annualized_volatility": 0.11100834748141913,
+        "sharpe_zero_rate": 0.999589398584091,
+        "max_drawdown": -0.20487813856518056,
+        "daily_var_95": 0.010655777966711799,
+        "daily_expected_shortfall_95": 0.016644049969548616,
+        "worst_daily_return": -0.05937154957048307,
+        "average_cash_weight": 7.75232799913389e-17,
+        "average_close_weights": {
+          "SPY": 0.6011043407498791,
+          "IEF": 0.29856822058385346,
+          "GLD": 0.10032743866626732
+        },
+        "annualized_gross_turnover": 0.33317505584891144,
+        "total_fees_as_fraction_of_starting_nav": 0.00233394242836453,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 0.9324649103067801,
+        "cagr": 0.07046746720939101,
+        "annualized_volatility": 0.08043028992536147,
+        "sharpe_zero_rate": 0.8870135705865895,
+        "max_drawdown": -0.16200383992422274,
+        "daily_var_95": 0.007650410188500989,
+        "daily_expected_shortfall_95": 0.012390262224178194,
+        "worst_daily_return": -0.04409407277110433,
+        "average_cash_weight": 0.22905386146342183,
+        "average_close_weights": {
+          "SPY": 0.463073237220676,
+          "IEF": 0.230442150235063,
+          "GLD": 0.07743075108083923
+        },
+        "annualized_gross_turnover": 0.82629759710605,
+        "total_fees_as_fraction_of_starting_nav": 0.005382605052187407,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.2567938331528197,
+        "cagr": 0.08777263151524939,
+        "annualized_volatility": 0.0878448303840539,
+        "sharpe_zero_rate": 1.001842064310507,
+        "max_drawdown": -0.16512838008961073,
+        "daily_var_95": 0.008462652529756531,
+        "daily_expected_shortfall_95": 0.013185960509358845,
+        "worst_daily_return": -0.04669571517602933,
+        "average_cash_weight": 0.2053546717069827,
+        "average_close_weights": {
+          "SPY": 0.4776912183670356,
+          "IEF": 0.23723402676972977,
+          "GLD": 0.07972008315625201
+        },
+        "annualized_gross_turnover": 0.2760652213760575,
+        "total_fees_as_fraction_of_starting_nav": 0.0017908936539256077,
+        "rebalances": 117
+      }
+    },
+    "10": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.7512172441820986,
+        "cagr": 0.11027559081094407,
+        "annualized_volatility": 0.11100720322365577,
+        "sharpe_zero_rate": 0.9980973073674404,
+        "max_drawdown": -0.204972883530681,
+        "daily_var_95": 0.010655777966711799,
+        "daily_expected_shortfall_95": 0.0166447749729864,
+        "worst_daily_return": -0.05937154957048296,
+        "average_cash_weight": 8.998276871485236e-17,
+        "average_close_weights": {
+          "SPY": 0.6011043407498792,
+          "IEF": 0.29856822058385346,
+          "GLD": 0.10032743866626732
+        },
+        "annualized_gross_turnover": 0.33313114293015306,
+        "total_fees_as_fraction_of_starting_nav": 0.0046633790669897285,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 0.9247557513988034,
+        "cagr": 0.07002527235557499,
+        "annualized_volatility": 0.08043246629991138,
+        "sharpe_zero_rate": 0.8818536194837714,
+        "max_drawdown": -0.16209347603008817,
+        "daily_var_95": 0.007650410188500878,
+        "daily_expected_shortfall_95": 0.012392964021816548,
+        "worst_daily_return": -0.04409407277110422,
+        "average_cash_weight": 0.22905386146342183,
+        "average_close_weights": {
+          "SPY": 0.46307323722067595,
+          "IEF": 0.23044215023506295,
+          "GLD": 0.07743075108083923
+        },
+        "annualized_gross_turnover": 0.8262340083259169,
+        "total_fees_as_fraction_of_starting_nav": 0.010741492480082996,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.2537821006026064,
+        "cagr": 0.08762249391887811,
+        "annualized_volatility": 0.08784386966890718,
+        "sharpe_zero_rate": 1.000280224876627,
+        "max_drawdown": -0.16521383509613408,
+        "daily_var_95": 0.00846265252975642,
+        "daily_expected_shortfall_95": 0.01318656815912281,
+        "worst_daily_return": -0.04669571517602933,
+        "average_cash_weight": 0.20535467170698268,
+        "average_close_weights": {
+          "SPY": 0.4776912183670356,
+          "IEF": 0.23723402676972977,
+          "GLD": 0.07972008315625202
+        },
+        "annualized_gross_turnover": 0.27603877694490764,
+        "total_fees_as_fraction_of_starting_nav": 0.0035790127556255065,
+        "rebalances": 117
+      }
+    },
+    "20": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.7423648340430322,
+        "cagr": 0.10990579534841882,
+        "annualized_volatility": 0.11100566125891571,
+        "sharpe_zero_rate": 0.995107523469364,
+        "max_drawdown": -0.20516233681231644,
+        "daily_var_95": 0.010655777966711688,
+        "daily_expected_shortfall_95": 0.016646224831914476,
+        "worst_daily_return": -0.05937154957048307,
+        "average_cash_weight": 8.912812531653747e-17,
+        "average_close_weights": {
+          "SPY": 0.6011043407498791,
+          "IEF": 0.29856822058385346,
+          "GLD": 0.10032743866626734
+        },
+        "annualized_gross_turnover": 0.33304367550983505,
+        "total_fees_as_fraction_of_starting_nav": 0.009308781050201333,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 0.9094299022113415,
+        "cagr": 0.06914144961565061,
+        "annualized_volatility": 0.0804389212534158,
+        "sharpe_zero_rate": 0.8715141304820121,
+        "max_drawdown": -0.16227295054910207,
+        "daily_var_95": 0.007650410188500878,
+        "daily_expected_shortfall_95": 0.012398370763438889,
+        "worst_daily_return": -0.04409407277110411,
+        "average_cash_weight": 0.22905386146342183,
+        "average_close_weights": {
+          "SPY": 0.46307323722067595,
+          "IEF": 0.23044215023506295,
+          "GLD": 0.07743075108083923
+        },
+        "annualized_gross_turnover": 0.8261075586003975,
+        "total_fees_as_fraction_of_starting_nav": 0.021388532054915154,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.2477712632655482,
+        "cagr": 0.0873223096653315,
+        "annualized_volatility": 0.0878425464993253,
+        "sharpe_zero_rate": 0.9971505533639682,
+        "max_drawdown": -0.165384709241845,
+        "daily_var_95": 0.00846265252975642,
+        "daily_expected_shortfall_95": 0.013187783393872735,
+        "worst_daily_return": -0.04669571517602922,
+        "average_cash_weight": 0.20535467170698268,
+        "average_close_weights": {
+          "SPY": 0.4776912183670356,
+          "IEF": 0.23723402676972977,
+          "GLD": 0.07972008315625202
+        },
+        "annualized_gross_turnover": 0.27598606474549553,
+        "total_fees_as_fraction_of_starting_nav": 0.007146947303140445,
+        "rebalances": 117
+      }
+    }
+  },
+  "holdout_es_lookback_sensitivity_sessions": {
+    "126": {
+      "sessions": 2438,
+      "total_return": 0.9324649103067801,
+      "cagr": 0.07046746720939101,
+      "annualized_volatility": 0.08043028992536147,
+      "sharpe_zero_rate": 0.8870135705865895,
+      "max_drawdown": -0.16200383992422274,
+      "daily_var_95": 0.007650410188500989,
+      "daily_expected_shortfall_95": 0.012390262224178194,
+      "worst_daily_return": -0.04409407277110433,
+      "average_cash_weight": 0.22905386146342183,
+      "average_close_weights": {
+        "SPY": 0.463073237220676,
+        "IEF": 0.230442150235063,
+        "GLD": 0.07743075108083923
+      },
+      "annualized_gross_turnover": 0.82629759710605,
+      "total_fees_as_fraction_of_starting_nav": 0.005382605052187407,
+      "rebalances": 117
+    },
+    "20": {
+      "sessions": 2438,
+      "total_return": 1.0897985791896483,
+      "cagr": 0.07916309807225308,
+      "annualized_volatility": 0.07792207013317733,
+      "sharpe_zero_rate": 1.016852518894735,
+      "max_drawdown": -0.15064882705714655,
+      "daily_var_95": 0.0076915092057552314,
+      "daily_expected_shortfall_95": 0.012074316151654245,
+      "worst_daily_return": -0.024799909384308316,
+      "average_cash_weight": 0.16935067491636768,
+      "average_close_weights": {
+        "SPY": 0.49918802479727215,
+        "IEF": 0.24812606960991648,
+        "GLD": 0.0833352306764437
+      },
+      "annualized_gross_turnover": 2.245714482868722,
+      "total_fees_as_fraction_of_starting_nav": 0.016066204591057297,
+      "rebalances": 117
+    },
+    "60": {
+      "sessions": 2438,
+      "total_return": 1.0875374263516,
+      "cagr": 0.07904234722832815,
+      "annualized_volatility": 0.07564624021363638,
+      "sharpe_zero_rate": 1.0436336490537397,
+      "max_drawdown": -0.12877502797899198,
+      "daily_var_95": 0.007178860236595752,
+      "daily_expected_shortfall_95": 0.011470604634877212,
+      "worst_daily_return": -0.028667714241487174,
+      "average_cash_weight": 0.21806459418430577,
+      "average_close_weights": {
+        "SPY": 0.46984467128906815,
+        "IEF": 0.23362159493463935,
+        "GLD": 0.07846913959198673
+      },
+      "annualized_gross_turnover": 1.146243717553665,
+      "total_fees_as_fraction_of_starting_nav": 0.007889708920868696,
+      "rebalances": 117
+    },
+    "120": {
+      "sessions": 2438,
+      "total_return": 0.9231667863079345,
+      "cagr": 0.06993393248467283,
+      "annualized_volatility": 0.07801430528436791,
+      "sharpe_zero_rate": 0.9056311340585259,
+      "max_drawdown": -0.15638191508442745,
+      "daily_var_95": 0.007528423218624458,
+      "daily_expected_shortfall_95": 0.012036745433756803,
+      "worst_daily_return": -0.04071740553313907,
+      "average_cash_weight": 0.24136931992904473,
+      "average_close_weights": {
+        "SPY": 0.4556776827810952,
+        "IEF": 0.22675302635475833,
+        "GLD": 0.07619997093510172
+      },
+      "annualized_gross_turnover": 0.8462196176185584,
+      "total_fees_as_fraction_of_starting_nav": 0.005517973268251305,
+      "rebalances": 117
+    }
+  },
+  "holdout_cash_yield_sensitivity_pct": {
+    "0": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.7556548035122685,
+        "cagr": 0.11046056157140871,
+        "annualized_volatility": 0.11100834748141913,
+        "sharpe_zero_rate": 0.999589398584091,
+        "max_drawdown": -0.20487813856518056,
+        "daily_var_95": 0.010655777966711799,
+        "daily_expected_shortfall_95": 0.016644049969548616,
+        "worst_daily_return": -0.05937154957048307,
+        "average_cash_weight": 7.75232799913389e-17,
+        "average_close_weights": {
+          "SPY": 0.6011043407498791,
+          "IEF": 0.29856822058385346,
+          "GLD": 0.10032743866626732
+        },
+        "annualized_gross_turnover": 0.33317505584891144,
+        "total_fees_as_fraction_of_starting_nav": 0.00233394242836453,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 0.9324649103067801,
+        "cagr": 0.07046746720939101,
+        "annualized_volatility": 0.08043028992536147,
+        "sharpe_zero_rate": 0.8870135705865895,
+        "max_drawdown": -0.16200383992422274,
+        "daily_var_95": 0.007650410188500989,
+        "daily_expected_shortfall_95": 0.012390262224178194,
+        "worst_daily_return": -0.04409407277110433,
+        "average_cash_weight": 0.22905386146342183,
+        "average_close_weights": {
+          "SPY": 0.463073237220676,
+          "IEF": 0.230442150235063,
+          "GLD": 0.07743075108083923
+        },
+        "annualized_gross_turnover": 0.82629759710605,
+        "total_fees_as_fraction_of_starting_nav": 0.005382605052187407,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.2567938331528197,
+        "cagr": 0.08777263151524939,
+        "annualized_volatility": 0.0878448303840539,
+        "sharpe_zero_rate": 1.001842064310507,
+        "max_drawdown": -0.16512838008961073,
+        "daily_var_95": 0.008462652529756531,
+        "daily_expected_shortfall_95": 0.013185960509358845,
+        "worst_daily_return": -0.04669571517602933,
+        "average_cash_weight": 0.2053546717069827,
+        "average_close_weights": {
+          "SPY": 0.4776912183670356,
+          "IEF": 0.23723402676972977,
+          "GLD": 0.07972008315625201
+        },
+        "annualized_gross_turnover": 0.2760652213760575,
+        "total_fees_as_fraction_of_starting_nav": 0.0017908936539256077,
+        "rebalances": 117
+      }
+    },
+    "2": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.7556548035122685,
+        "cagr": 0.11046056157140871,
+        "annualized_volatility": 0.11100834748141912,
+        "sharpe_zero_rate": 0.999589398584089,
+        "max_drawdown": -0.20487813856518056,
+        "daily_var_95": 0.010655777966711799,
+        "daily_expected_shortfall_95": 0.01664404996954861,
+        "worst_daily_return": -0.05937154957048307,
+        "average_cash_weight": 8.10408869847768e-17,
+        "average_close_weights": {
+          "SPY": 0.6011043407498791,
+          "IEF": 0.29856822058385346,
+          "GLD": 0.10032743866626732
+        },
+        "annualized_gross_turnover": 0.33317505584891144,
+        "total_fees_as_fraction_of_starting_nav": 0.0023339424283645304,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 1.0188997991229352,
+        "cagr": 0.07531995039447392,
+        "annualized_volatility": 0.08042049432405927,
+        "sharpe_zero_rate": 0.9433665453655848,
+        "max_drawdown": -0.1617081013080287,
+        "daily_var_95": 0.007644469333893289,
+        "daily_expected_shortfall_95": 0.012376420368729574,
+        "worst_daily_return": -0.04406760093067974,
+        "average_cash_weight": 0.22915336472743686,
+        "average_close_weights": {
+          "SPY": 0.463013290974299,
+          "IEF": 0.23041254080405896,
+          "GLD": 0.07742080349420505
+        },
+        "annualized_gross_turnover": 0.8261630181045199,
+        "total_fees_as_fraction_of_starting_nav": 0.005492503631307716,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.3470610466001172,
+        "cagr": 0.09219117975136837,
+        "annualized_volatility": 0.0878322592861942,
+        "sharpe_zero_rate": 1.0481416615559904,
+        "max_drawdown": -0.16234209679363465,
+        "daily_var_95": 0.008445101250544762,
+        "daily_expected_shortfall_95": 0.013167787533667465,
+        "worst_daily_return": -0.04667344517989058,
+        "average_cash_weight": 0.20548254851628217,
+        "average_close_weights": {
+          "SPY": 0.4776143373552254,
+          "IEF": 0.23719587519755866,
+          "GLD": 0.07970723893093375
+        },
+        "annualized_gross_turnover": 0.27565798128129465,
+        "total_fees_as_fraction_of_starting_nav": 0.001818049165396959,
+        "rebalances": 117
+      }
+    },
+    "4": {
+      "fixed_weights": {
+        "sessions": 2438,
+        "total_return": 1.7556548035122685,
+        "cagr": 0.11046056157140871,
+        "annualized_volatility": 0.11100834748141913,
+        "sharpe_zero_rate": 0.999589398584091,
+        "max_drawdown": -0.20487813856518056,
+        "daily_var_95": 0.010655777966711799,
+        "daily_expected_shortfall_95": 0.016644049969548613,
+        "worst_daily_return": -0.05937154957048307,
+        "average_cash_weight": 8.370824574021755e-17,
+        "average_close_weights": {
+          "SPY": 0.6011043407498791,
+          "IEF": 0.29856822058385346,
+          "GLD": 0.10032743866626732
+        },
+        "annualized_gross_turnover": 0.33317505584891144,
+        "total_fees_as_fraction_of_starting_nav": 0.0023339424283645295,
+        "rebalances": 117
+      },
+      "es_overlay": {
+        "sessions": 2438,
+        "total_return": 1.1074911224774109,
+        "cagr": 0.08010389751603553,
+        "annualized_volatility": 0.08041182113984266,
+        "sharpe_zero_rate": 0.9986787972291873,
+        "max_drawdown": -0.16141773433279005,
+        "daily_var_95": 0.007644469333893067,
+        "daily_expected_shortfall_95": 0.012362941510181915,
+        "worst_daily_return": -0.04404162392668265,
+        "average_cash_weight": 0.22925095983692037,
+        "average_close_weights": {
+          "SPY": 0.46295449436646585,
+          "IEF": 0.23038349912872483,
+          "GLD": 0.07741104666788899
+        },
+        "annualized_gross_turnover": 0.8260366636944777,
+        "total_fees_as_fraction_of_starting_nav": 0.005603868600258933,
+        "rebalances": 117
+      },
+      "matched_static_cash": {
+        "sessions": 2438,
+        "total_return": 1.4392016570930575,
+        "cagr": 0.09654698334455114,
+        "annualized_volatility": 0.08781992783058531,
+        "sharpe_zero_rate": 1.0936143064423975,
+        "max_drawdown": -0.15959736552234727,
+        "daily_var_95": 0.008427875254805262,
+        "daily_expected_shortfall_95": 0.013149946846124803,
+        "worst_daily_return": -0.04665159057458901,
+        "average_cash_weight": 0.2056080208904538,
+        "average_close_weights": {
+          "SPY": 0.47753890190484793,
+          "IEF": 0.23715844099361705,
+          "GLD": 0.07969463621108129
+        },
+        "annualized_gross_turnover": 0.2753024843689922,
+        "total_fees_as_fraction_of_starting_nav": 0.0018457820454781436,
+        "rebalances": 117
+      }
+    }
+  },
+  "historical_stress": {
+    "global_financial_crisis": {
+      "period": "development",
+      "first_session": "2008-09-15",
+      "last_session": "2009-03-09",
+      "spy_ief_daily_return_correlation": -0.4496232093809534,
+      "strategies": {
+        "fixed_weights": {
+          "return": -0.2651186407308316,
+          "max_drawdown": -0.2696983943239336,
+          "average_cash_weight": 5.987298452480067e-17
+        },
+        "es_overlay": {
+          "return": -0.1170086798560902,
+          "max_drawdown": -0.12205165791554595,
+          "average_cash_weight": 0.6533350750061855
+        },
+        "matched_static_cash": {
+          "return": -0.21491815962041283,
+          "max_drawdown": -0.21879230047546472,
+          "average_cash_weight": 0.21193733228319347
+        }
+      }
+    },
+    "pandemic_selloff": {
+      "period": "holdout",
+      "first_session": "2020-02-20",
+      "last_session": "2020-03-23",
+      "spy_ief_daily_return_correlation": -0.5583038952287527,
+      "strategies": {
+        "fixed_weights": {
+          "return": -0.19726923262362883,
+          "max_drawdown": -0.19726923262362883,
+          "average_cash_weight": 6.990356329783273e-17
+        },
+        "es_overlay": {
+          "return": -0.16200383992422274,
+          "max_drawdown": -0.16200383992422274,
+          "average_cash_weight": 0.19166358993439814
+        },
+        "matched_static_cash": {
+          "return": -0.1583604288304854,
+          "max_drawdown": -0.1583604288304854,
+          "average_cash_weight": 0.21357744410010002
+        }
+      }
+    },
+    "pandemic_rebound_through_q2": {
+      "period": "holdout",
+      "first_session": "2020-03-24",
+      "last_session": "2020-06-30",
+      "spy_ief_daily_return_correlation": -0.5277371964401552,
+      "strategies": {
+        "fixed_weights": {
+          "return": 0.23564303006339649,
+          "max_drawdown": -0.037444697745393385,
+          "average_cash_weight": 5.755730857705537e-17
+        },
+        "es_overlay": {
+          "return": 0.08769993758178218,
+          "max_drawdown": -0.02348437020833971,
+          "average_cash_weight": 0.7034165841431165
+        },
+        "matched_static_cash": {
+          "return": 0.18234127416953383,
+          "max_drawdown": -0.029923925679465002,
+          "average_cash_weight": 0.20244732400859763
+        }
+      }
+    },
+    "inflation_and_rates_2022": {
+      "period": "holdout",
+      "first_session": "2022-01-03",
+      "last_session": "2022-10-12",
+      "spy_ief_daily_return_correlation": 0.121848053727573,
+      "strategies": {
+        "fixed_weights": {
+          "return": -0.20009175289289294,
+          "max_drawdown": -0.20009175289289294,
+          "average_cash_weight": 9.957011928909469e-17
+        },
+        "es_overlay": {
+          "return": -0.13407860991628695,
+          "max_drawdown": -0.13407860991628695,
+          "average_cash_weight": 0.36967487987512654
+        },
+        "matched_static_cash": {
+          "return": -0.16113732157421545,
+          "max_drawdown": -0.16113732157421545,
+          "average_cash_weight": 0.20820442141678216
+        }
+      }
+    }
+  },
+  "latest_risk": {
+    "as_of_session": "2026-09-15",
+    "strategies": {
+      "fixed_weights": {
+        "observations": 126,
+        "confidence": 0.95,
+        "annualized_volatility": 0.10881004553145038,
+        "var_95": 0.011361887236501908,
+        "expected_shortfall_95": 0.014595752711390018,
+        "cash_weight": 0.0,
+        "assets": {
+          "SPY": {
+            "weight": 0.6018604855676459,
+            "volatility_contribution": 0.07959894008107857
+          },
+          "IEF": {
+            "weight": 0.29826658238850057,
+            "volatility_contribution": 0.010121063750231985
+          },
+          "GLD": {
+            "weight": 0.09987293204385357,
+            "volatility_contribution": 0.01909004170013983
+          }
+        },
+        "stress": {
+          "equity_selloff": {
+            "portfolio_return": -0.12757547984640877,
+            "asset_contribution": {
+              "SPY": -0.15046512139191148,
+              "IEF": 0.017895994943310033,
+              "GLD": 0.0049936466021926786
+            }
+          },
+          "inflation_and_rates": {
+            "portfolio_return": -0.13106470932395964,
+            "asset_contribution": {
+              "SPY": -0.09027907283514688,
+              "IEF": -0.035791989886620065,
+              "GLD": -0.0049936466021926786
+            }
+          },
+          "gold_selloff": {
+            "portfolio_return": -0.04307732078589922,
+            "asset_contribution": {
+              "SPY": -0.02407441942270584,
+              "IEF": 0.005965331647770011,
+              "GLD": -0.024968233010963393
+            }
+          }
+        }
+      },
+      "es_overlay": {
+        "observations": 126,
+        "confidence": 0.95,
+        "annualized_volatility": 0.07390727287308603,
+        "var_95": 0.0077173582295640706,
+        "expected_shortfall_95": 0.009913903382358123,
+        "cash_weight": 0.32076792623228956,
+        "assets": {
+          "SPY": {
+            "weight": 0.40880294573095327,
+            "volatility_contribution": 0.054066153140982724
+          },
+          "IEF": {
+            "weight": 0.20259222929134887,
+            "volatility_contribution": 0.006874551119805272
+          },
+          "GLD": {
+            "weight": 0.06783689874540828,
+            "volatility_contribution": 0.012966568612298047
+          }
+        },
+        "stress": {
+          "equity_selloff": {
+            "portfolio_return": -0.08665335773798698,
+            "asset_contribution": {
+              "SPY": -0.10220073643273832,
+              "IEF": 0.012155533757480932,
+              "GLD": 0.0033918449372704143
+            }
+          },
+          "inflation_and_rates": {
+            "portfolio_return": -0.08902335431187526,
+            "asset_contribution": {
+              "SPY": -0.061320441859642985,
+              "IEF": -0.024311067514961864,
+              "GLD": -0.0033918449372704143
+            }
+          },
+          "gold_selloff": {
+            "portfolio_return": -0.029259497929763227,
+            "asset_contribution": {
+              "SPY": -0.016352117829238132,
+              "IEF": 0.004051844585826978,
+              "GLD": -0.01695922468635207
+            }
+          }
+        }
+      },
+      "matched_static_cash": {
+        "observations": 126,
+        "confidence": 0.95,
+        "annualized_volatility": 0.08622805198977991,
+        "var_95": 0.00900388744941686,
+        "expected_shortfall_95": 0.011566609658884256,
+        "cash_weight": 0.2075359258547813,
+        "assets": {
+          "SPY": {
+            "weight": 0.47695281245995624,
+            "volatility_contribution": 0.06307930035429267
+          },
+          "IEF": {
+            "weight": 0.23636555106096163,
+            "volatility_contribution": 0.008020579414192323
+          },
+          "GLD": {
+            "weight": 0.07914571062430076,
+            "volatility_contribution": 0.015128172221294922
+          }
+        },
+        "stress": {
+          "equity_selloff": {
+            "portfolio_return": -0.10109898452011633,
+            "asset_contribution": {
+              "SPY": -0.11923820311498906,
+              "IEF": 0.014181933063657698,
+              "GLD": 0.003957285531215038
+            }
+          },
+          "inflation_and_rates": {
+            "portfolio_return": -0.10386407352752386,
+            "asset_contribution": {
+              "SPY": -0.07154292186899343,
+              "IEF": -0.028363866127315396,
+              "GLD": -0.003957285531215038
+            }
+          },
+          "gold_selloff": {
+            "portfolio_return": -0.034137229133254204,
+            "asset_contribution": {
+              "SPY": -0.01907811249839825,
+              "IEF": 0.004727311021219233,
+              "GLD": -0.01978642765607519
+            }
+          }
+        }
+      }
+    }
+  },
+  "holdout_monthly_curve": [
+    {
+      "date": "2017-01-31",
+      "fixed_weights": {
+        "nav": 1.01355404,
+        "drawdown": -0.00254955
+      },
+      "es_overlay": {
+        "nav": 1.01355404,
+        "drawdown": -0.00254955
+      },
+      "matched_static_cash": {
+        "nav": 1.0107626,
+        "drawdown": -0.00203112
+      }
+    },
+    {
+      "date": "2017-02-28",
+      "fixed_weights": {
+        "nav": 1.04283654,
+        "drawdown": -0.00228013
+      },
+      "es_overlay": {
+        "nav": 1.04283654,
+        "drawdown": -0.00228013
+      },
+      "matched_static_cash": {
+        "nav": 1.03395291,
+        "drawdown": -0.00182237
+      }
+    },
+    {
+      "date": "2017-03-31",
+      "fixed_weights": {
+        "nav": 1.04355388,
+        "drawdown": -0.0055006
+      },
+      "es_overlay": {
+        "nav": 1.04355388,
+        "drawdown": -0.0055006
+      },
+      "matched_static_cash": {
+        "nav": 1.03452532,
+        "drawdown": -0.00437142
+      }
+    },
+    {
+      "date": "2017-04-28",
+      "fixed_weights": {
+        "nav": 1.0550414,
+        "drawdown": -0.00068286
+      },
+      "es_overlay": {
+        "nav": 1.0550414,
+        "drawdown": -0.00068286
+      },
+      "matched_static_cash": {
+        "nav": 1.04356618,
+        "drawdown": -0.00054341
+      }
+    },
+    {
+      "date": "2017-05-31",
+      "fixed_weights": {
+        "nav": 1.06644996,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.06644996,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.05252537,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2017-06-30",
+      "fixed_weights": {
+        "nav": 1.06658793,
+        "drawdown": -0.00962049
+      },
+      "es_overlay": {
+        "nav": 1.06658793,
+        "drawdown": -0.00962049
+      },
+      "matched_static_cash": {
+        "nav": 1.05263391,
+        "drawdown": -0.00765321
+      }
+    },
+    {
+      "date": "2017-07-31",
+      "fixed_weights": {
+        "nav": 1.08346441,
+        "drawdown": -0.00075953
+      },
+      "es_overlay": {
+        "nav": 1.08346441,
+        "drawdown": -0.00075953
+      },
+      "matched_static_cash": {
+        "nav": 1.06585435,
+        "drawdown": -0.0006049
+      }
+    },
+    {
+      "date": "2017-08-31",
+      "fixed_weights": {
+        "nav": 1.09467615,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.09467615,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.07461173,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2017-09-29",
+      "fixed_weights": {
+        "nav": 1.099458,
+        "drawdown": -0.00151705
+      },
+      "es_overlay": {
+        "nav": 1.099458,
+        "drawdown": -0.00151705
+      },
+      "matched_static_cash": {
+        "nav": 1.07833984,
+        "drawdown": -0.00120574
+      }
+    },
+    {
+      "date": "2017-10-31",
+      "fixed_weights": {
+        "nav": 1.11355742,
+        "drawdown": -0.00064374
+      },
+      "es_overlay": {
+        "nav": 1.11355742,
+        "drawdown": -0.00064374
+      },
+      "matched_static_cash": {
+        "nav": 1.08931854,
+        "drawdown": -0.00051247
+      }
+    },
+    {
+      "date": "2017-11-30",
+      "fixed_weights": {
+        "nav": 1.13343189,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.13343189,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.10475327,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2017-12-29",
+      "fixed_weights": {
+        "nav": 1.14468195,
+        "drawdown": -0.00114279
+      },
+      "es_overlay": {
+        "nav": 1.14468195,
+        "drawdown": -0.00114279
+      },
+      "matched_static_cash": {
+        "nav": 1.11345893,
+        "drawdown": -0.00090944
+      }
+    },
+    {
+      "date": "2018-01-31",
+      "fixed_weights": {
+        "nav": 1.17964828,
+        "drawdown": -0.01169052
+      },
+      "es_overlay": {
+        "nav": 1.17964828,
+        "drawdown": -0.01169052
+      },
+      "matched_static_cash": {
+        "nav": 1.14045491,
+        "drawdown": -0.00935599
+      }
+    },
+    {
+      "date": "2018-02-28",
+      "fixed_weights": {
+        "nav": 1.14809047,
+        "drawdown": -0.03812966
+      },
+      "es_overlay": {
+        "nav": 1.14809047,
+        "drawdown": -0.03812966
+      },
+      "matched_static_cash": {
+        "nav": 1.11620922,
+        "drawdown": -0.03041675
+      }
+    },
+    {
+      "date": "2018-03-29",
+      "fixed_weights": {
+        "nav": 1.1339159,
+        "drawdown": -0.05000511
+      },
+      "es_overlay": {
+        "nav": 1.13647881,
+        "drawdown": -0.04785791
+      },
+      "matched_static_cash": {
+        "nav": 1.10526863,
+        "drawdown": -0.03992018
+      }
+    },
+    {
+      "date": "2018-04-30",
+      "fixed_weights": {
+        "nav": 1.13205608,
+        "drawdown": -0.05156328
+      },
+      "es_overlay": {
+        "nav": 1.13503821,
+        "drawdown": -0.04906484
+      },
+      "matched_static_cash": {
+        "nav": 1.1038308,
+        "drawdown": -0.04116913
+      }
+    },
+    {
+      "date": "2018-05-31",
+      "fixed_weights": {
+        "nav": 1.1505517,
+        "drawdown": -0.03606764
+      },
+      "es_overlay": {
+        "nav": 1.14696232,
+        "drawdown": -0.03907482
+      },
+      "matched_static_cash": {
+        "nav": 1.11815674,
+        "drawdown": -0.02872506
+      }
+    },
+    {
+      "date": "2018-06-29",
+      "fixed_weights": {
+        "nav": 1.15108261,
+        "drawdown": -0.03562284
+      },
+      "es_overlay": {
+        "nav": 1.14731176,
+        "drawdown": -0.03878207
+      },
+      "matched_static_cash": {
+        "nav": 1.11857141,
+        "drawdown": -0.02836485
+      }
+    },
+    {
+      "date": "2018-07-31",
+      "fixed_weights": {
+        "nav": 1.17235879,
+        "drawdown": -0.01779765
+      },
+      "es_overlay": {
+        "nav": 1.16104884,
+        "drawdown": -0.02727313
+      },
+      "matched_static_cash": {
+        "nav": 1.13500413,
+        "drawdown": -0.01409075
+      }
+    },
+    {
+      "date": "2018-08-31",
+      "fixed_weights": {
+        "nav": 1.19588594,
+        "drawdown": -0.00241154
+      },
+      "es_overlay": {
+        "nav": 1.1761142,
+        "drawdown": -0.01465137
+      },
+      "matched_static_cash": {
+        "nav": 1.15308813,
+        "drawdown": -0.00192371
+      }
+    },
+    {
+      "date": "2018-09-28",
+      "fixed_weights": {
+        "nav": 1.19505396,
+        "drawdown": -0.00389868
+      },
+      "es_overlay": {
+        "nav": 1.17588616,
+        "drawdown": -0.01484242
+      },
+      "matched_static_cash": {
+        "nav": 1.15244345,
+        "drawdown": -0.00309878
+      }
+    },
+    {
+      "date": "2018-10-31",
+      "fixed_weights": {
+        "nav": 1.14712313,
+        "drawdown": -0.04384998
+      },
+      "es_overlay": {
+        "nav": 1.12857728,
+        "drawdown": -0.05447781
+      },
+      "matched_static_cash": {
+        "nav": 1.11576241,
+        "drawdown": -0.03482908
+      }
+    },
+    {
+      "date": "2018-11-30",
+      "fixed_weights": {
+        "nav": 1.1648395,
+        "drawdown": -0.02908303
+      },
+      "es_overlay": {
+        "nav": 1.1447259,
+        "drawdown": -0.0409485
+      },
+      "matched_static_cash": {
+        "nav": 1.12941346,
+        "drawdown": -0.02302048
+      }
+    },
+    {
+      "date": "2018-12-31",
+      "fixed_weights": {
+        "nav": 1.11943273,
+        "drawdown": -0.06693048
+      },
+      "es_overlay": {
+        "nav": 1.10910982,
+        "drawdown": -0.07078765
+      },
+      "matched_static_cash": {
+        "nav": 1.09457752,
+        "drawdown": -0.0531547
+      }
+    },
+    {
+      "date": "2019-01-31",
+      "fixed_weights": {
+        "nav": 1.17965622,
+        "drawdown": -0.016733
+      },
+      "es_overlay": {
+        "nav": 1.14875354,
+        "drawdown": -0.03757414
+      },
+      "matched_static_cash": {
+        "nav": 1.14150817,
+        "drawdown": -0.01255816
+      }
+    },
+    {
+      "date": "2019-02-28",
+      "fixed_weights": {
+        "nav": 1.20002917,
+        "drawdown": -0.00443602
+      },
+      "es_overlay": {
+        "nav": 1.16233276,
+        "drawdown": -0.02619747
+      },
+      "matched_static_cash": {
+        "nav": 1.15716008,
+        "drawdown": -0.00353756
+      }
+    },
+    {
+      "date": "2019-03-29",
+      "fixed_weights": {
+        "nav": 1.22078791,
+        "drawdown": -0.00292662
+      },
+      "es_overlay": {
+        "nav": 1.17609726,
+        "drawdown": -0.01466556
+      },
+      "matched_static_cash": {
+        "nav": 1.1730543,
+        "drawdown": -0.00233181
+      }
+    },
+    {
+      "date": "2019-04-30",
+      "fixed_weights": {
+        "nav": 1.24785847,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.19394293,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.19370281,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2019-05-31",
+      "fixed_weights": {
+        "nav": 1.21380759,
+        "drawdown": -0.02728746
+      },
+      "es_overlay": {
+        "nav": 1.16824197,
+        "drawdown": -0.02152612
+      },
+      "matched_static_cash": {
+        "nav": 1.1678524,
+        "drawdown": -0.02165565
+      }
+    },
+    {
+      "date": "2019-06-28",
+      "fixed_weights": {
+        "nav": 1.27868297,
+        "drawdown": -0.00163468
+      },
+      "es_overlay": {
+        "nav": 1.2163952,
+        "drawdown": -0.00127563
+      },
+      "matched_static_cash": {
+        "nav": 1.21739115,
+        "drawdown": -0.0013117
+      }
+    },
+    {
+      "date": "2019-07-31",
+      "fixed_weights": {
+        "nav": 1.29056875,
+        "drawdown": -0.00832051
+      },
+      "es_overlay": {
+        "nav": 1.22587223,
+        "drawdown": -0.00832051
+      },
+      "matched_static_cash": {
+        "nav": 1.22643345,
+        "drawdown": -0.0066215
+      }
+    },
+    {
+      "date": "2019-08-30",
+      "fixed_weights": {
+        "nav": 1.30315879,
+        "drawdown": -0.00045474
+      },
+      "es_overlay": {
+        "nav": 1.23783114,
+        "drawdown": -0.00045474
+      },
+      "matched_static_cash": {
+        "nav": 1.23593242,
+        "drawdown": -0.00036179
+      }
+    },
+    {
+      "date": "2019-09-30",
+      "fixed_weights": {
+        "nav": 1.30966257,
+        "drawdown": -0.0056159
+      },
+      "es_overlay": {
+        "nav": 1.24299333,
+        "drawdown": -0.00504822
+      },
+      "matched_static_cash": {
+        "nav": 1.24082898,
+        "drawdown": -0.00447104
+      }
+    },
+    {
+      "date": "2019-10-31",
+      "fixed_weights": {
+        "nav": 1.33121714,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.26225547,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.25704257,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2019-11-29",
+      "fixed_weights": {
+        "nav": 1.35303053,
+        "drawdown": -0.00191528
+      },
+      "es_overlay": {
+        "nav": 1.28094686,
+        "drawdown": -0.00172222
+      },
+      "matched_static_cash": {
+        "nav": 1.2733972,
+        "drawdown": -0.00152554
+      }
+    },
+    {
+      "date": "2019-12-31",
+      "fixed_weights": {
+        "nav": 1.37781368,
+        "drawdown": -0.00271424
+      },
+      "es_overlay": {
+        "nav": 1.30452448,
+        "drawdown": -0.00271424
+      },
+      "matched_static_cash": {
+        "nav": 1.29191742,
+        "drawdown": -0.00216479
+      }
+    },
+    {
+      "date": "2020-01-31",
+      "fixed_weights": {
+        "nav": 1.39801092,
+        "drawdown": -0.01133053
+      },
+      "es_overlay": {
+        "nav": 1.32363323,
+        "drawdown": -0.01131823
+      },
+      "matched_static_cash": {
+        "nav": 1.30696332,
+        "drawdown": -0.00903455
+      }
+    },
+    {
+      "date": "2020-02-28",
+      "fixed_weights": {
+        "nav": 1.34331149,
+        "drawdown": -0.06832488
+      },
+      "es_overlay": {
+        "nav": 1.27366696,
+        "drawdown": -0.06606962
+      },
+      "matched_static_cash": {
+        "nav": 1.26638114,
+        "drawdown": -0.05457029
+      }
+    },
+    {
+      "date": "2020-03-31",
+      "fixed_weights": {
+        "nav": 1.25736353,
+        "drawdown": -0.12793546
+      },
+      "es_overlay": {
+        "nav": 1.21401545,
+        "drawdown": -0.10980975
+      },
+      "matched_static_cash": {
+        "nav": 1.20208585,
+        "drawdown": -0.10257059
+      }
+    },
+    {
+      "date": "2020-04-30",
+      "fixed_weights": {
+        "nav": 1.36772238,
+        "drawdown": -0.05139432
+      },
+      "es_overlay": {
+        "nav": 1.22956669,
+        "drawdown": -0.09840664
+      },
+      "matched_static_cash": {
+        "nav": 1.28655966,
+        "drawdown": -0.03950581
+      }
+    },
+    {
+      "date": "2020-05-29",
+      "fixed_weights": {
+        "nav": 1.41110452,
+        "drawdown": -0.02130595
+      },
+      "es_overlay": {
+        "nav": 1.23895142,
+        "drawdown": -0.09152517
+      },
+      "matched_static_cash": {
+        "nav": 1.31881537,
+        "drawdown": -0.01542499
+      }
+    },
+    {
+      "date": "2020-06-30",
+      "fixed_weights": {
+        "nav": 1.43012884,
+        "drawdown": -0.01655205
+      },
+      "es_overlay": {
+        "nav": 1.24306121,
+        "drawdown": -0.08851163
+      },
+      "matched_static_cash": {
+        "nav": 1.33292031,
+        "drawdown": -0.01322757
+      }
+    },
+    {
+      "date": "2020-07-31",
+      "fixed_weights": {
+        "nav": 1.49973758,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.25751676,
+        "drawdown": -0.07791194
+      },
+      "matched_static_cash": {
+        "nav": 1.3844192,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2020-08-31",
+      "fixed_weights": {
+        "nav": 1.55753937,
+        "drawdown": -0.00170086
+      },
+      "es_overlay": {
+        "nav": 1.26910144,
+        "drawdown": -0.06941735
+      },
+      "matched_static_cash": {
+        "nav": 1.42678757,
+        "drawdown": -0.00136057
+      }
+    },
+    {
+      "date": "2020-09-30",
+      "fixed_weights": {
+        "nav": 1.51763699,
+        "drawdown": -0.03966982
+      },
+      "es_overlay": {
+        "nav": 1.26135238,
+        "drawdown": -0.07509943
+      },
+      "matched_static_cash": {
+        "nav": 1.39780342,
+        "drawdown": -0.03157346
+      }
+    },
+    {
+      "date": "2020-10-30",
+      "fixed_weights": {
+        "nav": 1.48775585,
+        "drawdown": -0.058578
+      },
+      "es_overlay": {
+        "nav": 1.24651218,
+        "drawdown": -0.08598117
+      },
+      "matched_static_cash": {
+        "nav": 1.37594684,
+        "drawdown": -0.04671615
+      }
+    },
+    {
+      "date": "2020-11-30",
+      "fixed_weights": {
+        "nav": 1.57799802,
+        "drawdown": -0.00528228
+      },
+      "es_overlay": {
+        "nav": 1.28487628,
+        "drawdown": -0.05785027
+      },
+      "matched_static_cash": {
+        "nav": 1.44206524,
+        "drawdown": -0.0042415
+      }
+    },
+    {
+      "date": "2020-12-31",
+      "fixed_weights": {
+        "nav": 1.62294873,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.3035659,
+        "drawdown": -0.0441459
+      },
+      "matched_static_cash": {
+        "nav": 1.47472653,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2021-01-29",
+      "fixed_weights": {
+        "nav": 1.60271437,
+        "drawdown": -0.02452606
+      },
+      "es_overlay": {
+        "nav": 1.29223384,
+        "drawdown": -0.05245525
+      },
+      "matched_static_cash": {
+        "nav": 1.46016029,
+        "drawdown": -0.01950725
+      }
+    },
+    {
+      "date": "2021-02-26",
+      "fixed_weights": {
+        "nav": 1.60795214,
+        "drawdown": -0.02916891
+      },
+      "es_overlay": {
+        "nav": 1.2951436,
+        "drawdown": -0.05032164
+      },
+      "matched_static_cash": {
+        "nav": 1.46392795,
+        "drawdown": -0.02328044
+      }
+    },
+    {
+      "date": "2021-03-31",
+      "fixed_weights": {
+        "nav": 1.63832966,
+        "drawdown": -0.01082792
+      },
+      "es_overlay": {
+        "nav": 1.30950115,
+        "drawdown": -0.03979381
+      },
+      "matched_static_cash": {
+        "nav": 1.48585706,
+        "drawdown": -0.00864954
+      }
+    },
+    {
+      "date": "2021-04-30",
+      "fixed_weights": {
+        "nav": 1.70106799,
+        "drawdown": -0.00408575
+      },
+      "es_overlay": {
+        "nav": 1.34296646,
+        "drawdown": -0.015255
+      },
+      "matched_static_cash": {
+        "nav": 1.53100533,
+        "drawdown": -0.00326818
+      }
+    },
+    {
+      "date": "2021-05-28",
+      "fixed_weights": {
+        "nav": 1.72296278,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.35608417,
+        "drawdown": -0.00563629
+      },
+      "matched_static_cash": {
+        "nav": 1.54667567,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2021-06-30",
+      "fixed_weights": {
+        "nav": 1.73905582,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.36569269,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.55814919,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2021-07-30",
+      "fixed_weights": {
+        "nav": 1.77923235,
+        "drawdown": -0.00287578
+      },
+      "es_overlay": {
+        "nav": 1.38898623,
+        "drawdown": -0.00213713
+      },
+      "matched_static_cash": {
+        "nav": 1.58672262,
+        "drawdown": -0.00229454
+      }
+    },
+    {
+      "date": "2021-08-31",
+      "fixed_weights": {
+        "nav": 1.80872078,
+        "drawdown": -0.0012533
+      },
+      "es_overlay": {
+        "nav": 1.40827397,
+        "drawdown": -0.0010813
+      },
+      "matched_static_cash": {
+        "nav": 1.60760587,
+        "drawdown": -0.00099815
+      }
+    },
+    {
+      "date": "2021-09-30",
+      "fixed_weights": {
+        "nav": 1.7436542,
+        "drawdown": -0.03846869
+      },
+      "es_overlay": {
+        "nav": 1.35717735,
+        "drawdown": -0.03846869
+      },
+      "matched_static_cash": {
+        "nav": 1.56171419,
+        "drawdown": -0.03054742
+      }
+    },
+    {
+      "date": "2021-10-29",
+      "fixed_weights": {
+        "nav": 1.81720691,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.41442728,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.61395384,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2021-11-30",
+      "fixed_weights": {
+        "nav": 1.81328099,
+        "drawdown": -0.01989002
+      },
+      "es_overlay": {
+        "nav": 1.41137152,
+        "drawdown": -0.01989002
+      },
+      "matched_static_cash": {
+        "nav": 1.61119511,
+        "drawdown": -0.01584689
+      }
+    },
+    {
+      "date": "2021-12-31",
+      "fixed_weights": {
+        "nav": 1.86636347,
+        "drawdown": -0.00291321
+      },
+      "es_overlay": {
+        "nav": 1.45268839,
+        "drawdown": -0.00291321
+      },
+      "matched_static_cash": {
+        "nav": 1.64859434,
+        "drawdown": -0.00232442
+      }
+    },
+    {
+      "date": "2022-01-31",
+      "fixed_weights": {
+        "nav": 1.79261592,
+        "drawdown": -0.04231212
+      },
+      "es_overlay": {
+        "nav": 1.39528682,
+        "drawdown": -0.04231212
+      },
+      "matched_static_cash": {
+        "nav": 1.59685454,
+        "drawdown": -0.03363565
+      }
+    },
+    {
+      "date": "2022-02-28",
+      "fixed_weights": {
+        "nav": 1.7701714,
+        "drawdown": -0.0543029
+      },
+      "es_overlay": {
+        "nav": 1.37990349,
+        "drawdown": -0.05287084
+      },
+      "matched_static_cash": {
+        "nav": 1.5809701,
+        "drawdown": -0.0432484
+      }
+    },
+    {
+      "date": "2022-03-31",
+      "fixed_weights": {
+        "nav": 1.7911826,
+        "drawdown": -0.04307786
+      },
+      "es_overlay": {
+        "nav": 1.3922472,
+        "drawdown": -0.04439844
+      },
+      "matched_static_cash": {
+        "nav": 1.59587018,
+        "drawdown": -0.03423136
+      }
+    },
+    {
+      "date": "2022-04-29",
+      "fixed_weights": {
+        "nav": 1.67110844,
+        "drawdown": -0.10722633
+      },
+      "es_overlay": {
+        "nav": 1.32367244,
+        "drawdown": -0.09146633
+      },
+      "matched_static_cash": {
+        "nav": 1.5109083,
+        "drawdown": -0.08564752
+      }
+    },
+    {
+      "date": "2022-05-31",
+      "fixed_weights": {
+        "nav": 1.6706958,
+        "drawdown": -0.10744678
+      },
+      "es_overlay": {
+        "nav": 1.32286409,
+        "drawdown": -0.09202117
+      },
+      "matched_static_cash": {
+        "nav": 1.51067354,
+        "drawdown": -0.08578959
+      }
+    },
+    {
+      "date": "2022-06-30",
+      "fixed_weights": {
+        "nav": 1.58117662,
+        "drawdown": -0.15527154
+      },
+      "es_overlay": {
+        "nav": 1.28776188,
+        "drawdown": -0.11611439
+      },
+      "matched_static_cash": {
+        "nav": 1.44646638,
+        "drawdown": -0.12464567
+      }
+    },
+    {
+      "date": "2022-07-29",
+      "fixed_weights": {
+        "nav": 1.67885971,
+        "drawdown": -0.10308529
+      },
+      "es_overlay": {
+        "nav": 1.32344871,
+        "drawdown": -0.0916199
+      },
+      "matched_static_cash": {
+        "nav": 1.51738212,
+        "drawdown": -0.08172977
+      }
+    },
+    {
+      "date": "2022-08-31",
+      "fixed_weights": {
+        "nav": 1.61307244,
+        "drawdown": -0.13823151
+      },
+      "es_overlay": {
+        "nav": 1.30010827,
+        "drawdown": -0.10764016
+      },
+      "matched_static_cash": {
+        "nav": 1.4701039,
+        "drawdown": -0.11034101
+      }
+    },
+    {
+      "date": "2022-09-30",
+      "fixed_weights": {
+        "nav": 1.49604458,
+        "drawdown": -0.20075252
+      },
+      "es_overlay": {
+        "nav": 1.25882879,
+        "drawdown": -0.1359733
+      },
+      "matched_static_cash": {
+        "nav": 1.38537306,
+        "drawdown": -0.16161736
+      }
+    },
+    {
+      "date": "2022-10-31",
+      "fixed_weights": {
+        "nav": 1.55964101,
+        "drawdown": -0.16677674
+      },
+      "es_overlay": {
+        "nav": 1.28073829,
+        "drawdown": -0.1209352
+      },
+      "matched_static_cash": {
+        "nav": 1.43189586,
+        "drawdown": -0.13346328
+      }
+    },
+    {
+      "date": "2022-11-30",
+      "fixed_weights": {
+        "nav": 1.64178385,
+        "drawdown": -0.12289271
+      },
+      "es_overlay": {
+        "nav": 1.30888732,
+        "drawdown": -0.10161445
+      },
+      "matched_static_cash": {
+        "nav": 1.49174922,
+        "drawdown": -0.09724197
+      }
+    },
+    {
+      "date": "2022-12-30",
+      "fixed_weights": {
+        "nav": 1.58244678,
+        "drawdown": -0.15459297
+      },
+      "es_overlay": {
+        "nav": 1.28720577,
+        "drawdown": -0.11649609
+      },
+      "matched_static_cash": {
+        "nav": 1.44901495,
+        "drawdown": -0.12310336
+      }
+    },
+    {
+      "date": "2023-01-31",
+      "fixed_weights": {
+        "nav": 1.66844313,
+        "drawdown": -0.10865025
+      },
+      "es_overlay": {
+        "nav": 1.32273484,
+        "drawdown": -0.09210988
+      },
+      "matched_static_cash": {
+        "nav": 1.51137434,
+        "drawdown": -0.08536549
+      }
+    },
+    {
+      "date": "2023-02-28",
+      "fixed_weights": {
+        "nav": 1.61792027,
+        "drawdown": -0.1356416
+      },
+      "es_overlay": {
+        "nav": 1.30184324,
+        "drawdown": -0.10644932
+      },
+      "matched_static_cash": {
+        "nav": 1.47501493,
+        "drawdown": -0.10736902
+      }
+    },
+    {
+      "date": "2023-03-31",
+      "fixed_weights": {
+        "nav": 1.68469727,
+        "drawdown": -0.09996663
+      },
+      "es_overlay": {
+        "nav": 1.33127415,
+        "drawdown": -0.08624873
+      },
+      "matched_static_cash": {
+        "nav": 1.52338664,
+        "drawdown": -0.07809604
+      }
+    },
+    {
+      "date": "2023-04-28",
+      "fixed_weights": {
+        "nav": 1.70643952,
+        "drawdown": -0.08835104
+      },
+      "es_overlay": {
+        "nav": 1.34212126,
+        "drawdown": -0.07880356
+      },
+      "matched_static_cash": {
+        "nav": 1.53898954,
+        "drawdown": -0.06865367
+      }
+    },
+    {
+      "date": "2023-05-31",
+      "fixed_weights": {
+        "nav": 1.70151607,
+        "drawdown": -0.09098135
+      },
+      "es_overlay": {
+        "nav": 1.33942818,
+        "drawdown": -0.08065202
+      },
+      "matched_static_cash": {
+        "nav": 1.53545911,
+        "drawdown": -0.07079017
+      }
+    },
+    {
+      "date": "2023-06-30",
+      "fixed_weights": {
+        "nav": 1.75753663,
+        "drawdown": -0.0610529
+      },
+      "es_overlay": {
+        "nav": 1.37384685,
+        "drawdown": -0.05702795
+      },
+      "matched_static_cash": {
+        "nav": 1.57558445,
+        "drawdown": -0.04650762
+      }
+    },
+    {
+      "date": "2023-07-31",
+      "fixed_weights": {
+        "nav": 1.79257685,
+        "drawdown": -0.042333
+      },
+      "es_overlay": {
+        "nav": 1.39969965,
+        "drawdown": -0.03928328
+      },
+      "matched_static_cash": {
+        "nav": 1.60052298,
+        "drawdown": -0.03141564
+      }
+    },
+    {
+      "date": "2023-08-31",
+      "fixed_weights": {
+        "nav": 1.76889042,
+        "drawdown": -0.05498725
+      },
+      "es_overlay": {
+        "nav": 1.38229171,
+        "drawdown": -0.05123162
+      },
+      "matched_static_cash": {
+        "nav": 1.58369892,
+        "drawdown": -0.04159701
+      }
+    },
+    {
+      "date": "2023-09-29",
+      "fixed_weights": {
+        "nav": 1.69349253,
+        "drawdown": -0.09526785
+      },
+      "es_overlay": {
+        "nav": 1.32299471,
+        "drawdown": -0.09193151
+      },
+      "matched_static_cash": {
+        "nav": 1.53014391,
+        "drawdown": -0.07400676
+      }
+    },
+    {
+      "date": "2023-10-31",
+      "fixed_weights": {
+        "nav": 1.67416648,
+        "drawdown": -0.1055926
+      },
+      "es_overlay": {
+        "nav": 1.30789676,
+        "drawdown": -0.10229434
+      },
+      "matched_static_cash": {
+        "nav": 1.51631174,
+        "drawdown": -0.08237753
+      }
+    },
+    {
+      "date": "2023-11-30",
+      "fixed_weights": {
+        "nav": 1.7929455,
+        "drawdown": -0.04213605
+      },
+      "es_overlay": {
+        "nav": 1.39829807,
+        "drawdown": -0.04024528
+      },
+      "matched_static_cash": {
+        "nav": 1.60168453,
+        "drawdown": -0.03071271
+      }
+    },
+    {
+      "date": "2023-12-29",
+      "fixed_weights": {
+        "nav": 1.86461076,
+        "drawdown": -0.00412243
+      },
+      "es_overlay": {
+        "nav": 1.45270606,
+        "drawdown": -0.00401774
+      },
+      "matched_static_cash": {
+        "nav": 1.65250691,
+        "drawdown": -0.00330251
+      }
+    },
+    {
+      "date": "2024-01-31",
+      "fixed_weights": {
+        "nav": 1.88018522,
+        "drawdown": -0.00758772
+      },
+      "es_overlay": {
+        "nav": 1.46451302,
+        "drawdown": -0.00739066
+      },
+      "matched_static_cash": {
+        "nav": 1.66342559,
+        "drawdown": -0.00605058
+      }
+    },
+    {
+      "date": "2024-02-29",
+      "fixed_weights": {
+        "nav": 1.92816122,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.50126374,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.69711682,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2024-03-28",
+      "fixed_weights": {
+        "nav": 1.9869144,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.54540291,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.73817217,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2024-04-30",
+      "fixed_weights": {
+        "nav": 1.92620214,
+        "drawdown": -0.03055605
+      },
+      "es_overlay": {
+        "nav": 1.49810226,
+        "drawdown": -0.03060732
+      },
+      "matched_static_cash": {
+        "nav": 1.69602093,
+        "drawdown": -0.02425032
+      }
+    },
+    {
+      "date": "2024-05-31",
+      "fixed_weights": {
+        "nav": 1.99832059,
+        "drawdown": -0.00985036
+      },
+      "es_overlay": {
+        "nav": 1.55419233,
+        "drawdown": -0.00985036
+      },
+      "matched_static_cash": {
+        "nav": 1.74642334,
+        "drawdown": -0.00789391
+      }
+    },
+    {
+      "date": "2024-06-28",
+      "fixed_weights": {
+        "nav": 2.04763987,
+        "drawdown": -0.00587853
+      },
+      "es_overlay": {
+        "nav": 1.59255037,
+        "drawdown": -0.00587853
+      },
+      "matched_static_cash": {
+        "nav": 1.78065467,
+        "drawdown": -0.0046938
+      }
+    },
+    {
+      "date": "2024-07-31",
+      "fixed_weights": {
+        "nav": 2.09143067,
+        "drawdown": -0.01259367
+      },
+      "es_overlay": {
+        "nav": 1.62660863,
+        "drawdown": -0.01259367
+      },
+      "matched_static_cash": {
+        "nav": 1.81088922,
+        "drawdown": -0.010068
+      }
+    },
+    {
+      "date": "2024-08-30",
+      "fixed_weights": {
+        "nav": 2.1335312,
+        "drawdown": -0.00087317
+      },
+      "es_overlay": {
+        "nav": 1.65707262,
+        "drawdown": -0.00080587
+      },
+      "matched_static_cash": {
+        "nav": 1.83983576,
+        "drawdown": -0.00069585
+      }
+    },
+    {
+      "date": "2024-09-30",
+      "fixed_weights": {
+        "nav": 2.18018158,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.68793533,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.87177891,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "fixed_weights": {
+        "nav": 2.15570797,
+        "drawdown": -0.01996867
+      },
+      "es_overlay": {
+        "nav": 1.6727495,
+        "drawdown": -0.01613917
+      },
+      "matched_static_cash": {
+        "nav": 1.85511183,
+        "drawdown": -0.01587844
+      }
+    },
+    {
+      "date": "2024-11-29",
+      "fixed_weights": {
+        "nav": 2.23265722,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.7223345,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.90763899,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2024-12-31",
+      "fixed_weights": {
+        "nav": 2.18227221,
+        "drawdown": -0.02823552
+      },
+      "es_overlay": {
+        "nav": 1.68996442,
+        "drawdown": -0.02353042
+      },
+      "matched_static_cash": {
+        "nav": 1.87344268,
+        "drawdown": -0.02244913
+      }
+    },
+    {
+      "date": "2025-01-31",
+      "fixed_weights": {
+        "nav": 2.23621984,
+        "drawdown": -0.00421268
+      },
+      "es_overlay": {
+        "nav": 1.72052226,
+        "drawdown": -0.00587395
+      },
+      "matched_static_cash": {
+        "nav": 1.91014846,
+        "drawdown": -0.00329629
+      }
+    },
+    {
+      "date": "2025-02-28",
+      "fixed_weights": {
+        "nav": 2.24182166,
+        "drawdown": -0.01397334
+      },
+      "es_overlay": {
+        "nav": 1.72422162,
+        "drawdown": -0.01053501
+      },
+      "matched_static_cash": {
+        "nav": 1.91392665,
+        "drawdown": -0.01114982
+      }
+    },
+    {
+      "date": "2025-03-31",
+      "fixed_weights": {
+        "nav": 2.19033833,
+        "drawdown": -0.03661739
+      },
+      "es_overlay": {
+        "nav": 1.69227428,
+        "drawdown": -0.02886836
+      },
+      "matched_static_cash": {
+        "nav": 1.87904736,
+        "drawdown": -0.02917057
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "fixed_weights": {
+        "nav": 2.19789205,
+        "drawdown": -0.03329502
+      },
+      "es_overlay": {
+        "nav": 1.69660669,
+        "drawdown": -0.02638216
+      },
+      "matched_static_cash": {
+        "nav": 1.88420271,
+        "drawdown": -0.026507
+      }
+    },
+    {
+      "date": "2025-05-30",
+      "fixed_weights": {
+        "nav": 2.27178536,
+        "drawdown": -0.0018812
+      },
+      "es_overlay": {
+        "nav": 1.72474815,
+        "drawdown": -0.01023285
+      },
+      "matched_static_cash": {
+        "nav": 1.93446539,
+        "drawdown": -0.00150292
+      }
+    },
+    {
+      "date": "2025-06-30",
+      "fixed_weights": {
+        "nav": 2.35384173,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.75372032,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 1.98994178,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2025-07-31",
+      "fixed_weights": {
+        "nav": 2.38064161,
+        "drawdown": -0.00572148
+      },
+      "es_overlay": {
+        "nav": 1.76371939,
+        "drawdown": -0.00288795
+      },
+      "matched_static_cash": {
+        "nav": 2.00792567,
+        "drawdown": -0.00455899
+      }
+    },
+    {
+      "date": "2025-08-29",
+      "fixed_weights": {
+        "nav": 2.43331149,
+        "drawdown": -0.0028973
+      },
+      "es_overlay": {
+        "nav": 1.783251,
+        "drawdown": -0.00146867
+      },
+      "matched_static_cash": {
+        "nav": 2.04320162,
+        "drawdown": -0.00231266
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "fixed_weights": {
+        "nav": 2.51848023,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.81457889,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 2.10002708,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "fixed_weights": {
+        "nav": 2.56881607,
+        "drawdown": -0.00559032
+      },
+      "es_overlay": {
+        "nav": 1.83373169,
+        "drawdown": -0.00298324
+      },
+      "matched_static_cash": {
+        "nav": 2.13333965,
+        "drawdown": -0.00446279
+      }
+    },
+    {
+      "date": "2025-11-28",
+      "fixed_weights": {
+        "nav": 2.59335059,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.84821007,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 2.14953074,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2025-12-31",
+      "fixed_weights": {
+        "nav": 2.59443462,
+        "drawdown": -0.01329168
+      },
+      "es_overlay": {
+        "nav": 1.84898264,
+        "drawdown": -0.01329168
+      },
+      "matched_static_cash": {
+        "nav": 2.15024187,
+        "drawdown": -0.01059305
+      }
+    },
+    {
+      "date": "2026-01-30",
+      "fixed_weights": {
+        "nav": 2.64722472,
+        "drawdown": -0.01479644
+      },
+      "es_overlay": {
+        "nav": 1.88660469,
+        "drawdown": -0.01479644
+      },
+      "matched_static_cash": {
+        "nav": 2.18496078,
+        "drawdown": -0.01181982
+      }
+    },
+    {
+      "date": "2026-02-27",
+      "fixed_weights": {
+        "nav": 2.67612963,
+        "drawdown": -0.00403906
+      },
+      "es_overlay": {
+        "nav": 1.90700274,
+        "drawdown": -0.00414439
+      },
+      "matched_static_cash": {
+        "nav": 2.20390509,
+        "drawdown": -0.00325198
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "fixed_weights": {
+        "nav": 2.54962662,
+        "drawdown": -0.05111901
+      },
+      "es_overlay": {
+        "nav": 1.82187319,
+        "drawdown": -0.04859987
+      },
+      "matched_static_cash": {
+        "nav": 2.12107027,
+        "drawdown": -0.04071523
+      }
+    },
+    {
+      "date": "2026-04-30",
+      "fixed_weights": {
+        "nav": 2.70485619,
+        "drawdown": -0.00028325
+      },
+      "es_overlay": {
+        "nav": 1.90620118,
+        "drawdown": -0.00456297
+      },
+      "matched_static_cash": {
+        "nav": 2.22345675,
+        "drawdown": -0.00022741
+      }
+    },
+    {
+      "date": "2026-05-29",
+      "fixed_weights": {
+        "nav": 2.78603937,
+        "drawdown": 0.0
+      },
+      "es_overlay": {
+        "nav": 1.95016654,
+        "drawdown": 0.0
+      },
+      "matched_static_cash": {
+        "nav": 2.2764576,
+        "drawdown": 0.0
+      }
+    },
+    {
+      "date": "2026-06-30",
+      "fixed_weights": {
+        "nav": 2.73823546,
+        "drawdown": -0.01812652
+      },
+      "es_overlay": {
+        "nav": 1.92443163,
+        "drawdown": -0.01391608
+      },
+      "matched_static_cash": {
+        "nav": 2.24538508,
+        "drawdown": -0.0144064
+      }
+    },
+    {
+      "date": "2026-07-31",
+      "fixed_weights": {
+        "nav": 2.72947561,
+        "drawdown": -0.02126762
+      },
+      "es_overlay": {
+        "nav": 1.91994237,
+        "drawdown": -0.01621639
+      },
+      "matched_static_cash": {
+        "nav": 2.23969025,
+        "drawdown": -0.0169061
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "fixed_weights": {
+        "nav": 2.80153447,
+        "drawdown": -0.00838199
+      },
+      "es_overlay": {
+        "nav": 1.95434022,
+        "drawdown": -0.00575088
+      },
+      "matched_static_cash": {
+        "nav": 2.28661642,
+        "drawdown": -0.00669903
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "fixed_weights": {
+        "nav": 2.7556548,
+        "drawdown": -0.02462134
+      },
+      "es_overlay": {
+        "nav": 1.93246491,
+        "drawdown": -0.0168797
+      },
+      "matched_static_cash": {
+        "nav": 2.25679383,
+        "drawdown": -0.01965389
+      }
+    }
+  ]
+}
